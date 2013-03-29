@@ -17,7 +17,7 @@ Add `-J-Xbootclasspath/p:<location of preprocessor jar.jar>:$JAVA_HOME/lib/tools
 
 ## Example
 
-See [sample-maven-project](https://github.com/shyiko/javac-preprocessor/tree/master/supplement/string-interpolation-example).
+See [string-interpolation-example](https://github.com/shyiko/javac-preprocessor/tree/master/supplement/string-interpolation-example).
 
 ## License
 
