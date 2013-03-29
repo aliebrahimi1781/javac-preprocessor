@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.github.shyiko.javac-preprocessor</groupId>
+        <artifactId>javac-preprocessor</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>javac-preprocessor-jdk6</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.shyiko.javac-preprocessor</groupId>
+            <artifactId>javac-preprocessor-spi</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>sun.jdk</groupId>
+            <artifactId>tools</artifactId>
+            <version>1.6.0</version>
+            <scope>system</scope>
+            <systemPath>${java.home}/${tools.jar.location}</systemPath>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>sun-tools.jar-profile</id>
+            <activation>
+                <file>
+                    <exists>${java.home}/../lib/tools.jar</exists>
+                </file>
+            </activation>
+            <properties>
+                <tools.jar.location>../lib/tools.jar</tools.jar.location>
+            </properties>
+        </profile>
+        <profile>
+            <id>apple-tools.jar-profile</id>
+            <activation>
+                <file>
+                    <exists>${java.home}/../Classes/classes.jar</exists>
+                </file>
+            </activation>
+            <properties>
+                <tools.jar.location>../Classes/classes.jar</tools.jar.location>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>

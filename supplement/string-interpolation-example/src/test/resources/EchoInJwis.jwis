@@ -1,0 +1,6 @@
+public class EchoInJwis {
+
+    public static void main(String[] args) {
+        System.out.println("echo in jwis: #{java.util.Arrays.toString(args)}");
+    }
+}
