@@ -2,7 +2,7 @@
 
 ## Overview
 
-[src/main/java/string/interpolation/example/JwisPreprocessor.java](https://github.com/shyiko/javac-preprocessor/tree/master/supplement/string-interpolation-example/src/main/java/string/interpolation/example/JwisPreprocessor.java) adds support for *.jwis (java with interpolated strings) files. Each `"some string #{expression} some another string"` within such files are going to be replaced with `"some string " + expression + " some another string"`.
+[src/main/java/string/interpolation/example/JwisPreprocessor.java](https://github.com/shyiko/javac-preprocessor/tree/master/supplement/string-interpolation-example/src/main/java/string/interpolation/example/JwisPreprocessor.java) adds support for *.jwis (java with interpolated strings) files. Each `"some string #{expression} some another string"` within such files is going to be replaced with `"some string " + expression + " some another string"`.
 
 ## Usage
 
